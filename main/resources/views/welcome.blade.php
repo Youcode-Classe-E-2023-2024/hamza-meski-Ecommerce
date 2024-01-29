@@ -161,7 +161,7 @@
                 </div>
             </div>
 
-            <section class="flex w-full">
+            <section class="flex w-full h-full">
                 <!-- Sidebar -->
                 <div class="h-screen flex flex-col w-14 hover:w-64 md:w-64 bg-blue-900 dark:bg-gray-900 h-full text-white transition-all duration-300 border-none z-10 sidebar">
                     <div class="overflow-y-auto overflow-x-hidden flex flex-col justify-between flex-grow">
@@ -235,17 +235,65 @@
                 </div>
 
                 <!-- container -->
-                <main class="h-full overflow-auto">
-                    <div class="w-screen h-screen overflow-hidden relative before:block before:absolute before:bg-black before:h-full before:w-full before:top-0 before:left-0 before:z-10 before:opacity-30">
-                        <img src="https://picsum.photos/seed/picsum/1900/850" class="absolute top-0 left-0 min-h-full ob" alt="">
-                        <div class="relative z-20 max-w-screen-lg mx-auto grid grid-cols-12 h-full items-center">
-                            <div class="col-span-6">
-                                <span class="uppercase text-white text-xs font-bold mb-2 block">WE ARE EXPERTS</span>
-                                <h1 class="text-white font-extrabold text-5xl mb-8">Finpoint provides Financial Consulting in different ways</h1>
-                                <p class="text-stone-100 text-base">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
-                                <button class="mt-8 text-white uppercase py-4 text-base font-light px-10 border border-white hover:bg-white hover:bg-opacity-10">Get started</button>
+                <main class="h-screen overflow-auto">
+                    <!-- component -->
+                    <section class="h-screen">
+                        <div class="bg-black text-white py-20">
+                            <div class="container mx-auto flex flex-col md:flex-row items-center my-12 md:my-24">
+                                <div class="flex flex-col w-full lg:w-1/3 justify-center items-start p-8">
+                                    <h1 class="text-3xl md:text-5xl p-2 text-yellow-300 tracking-loose">TechFest</h1>
+                                    <h2 class="text-3xl md:text-5xl leading-relaxed md:leading-snug mb-2">Space : The Timeless Infinity
+                                    </h2>
+                                    <p class="text-sm md:text-base text-gray-50 mb-4">Explore your favourite events and
+                                        register now to showcase your talent and win exciting prizes.</p>
+                                    <a href="#"
+                                       class="bg-transparent hover:bg-yellow-300 text-yellow-300 hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 hover:border-transparent">
+                                        Explore Now</a>
+                                </div>
+                                <div class="p-8 mt-12 mb-6 md:mb-0 md:mt-0 ml-0 md:ml-12 lg:w-2/3  justify-center">
+                                    <div class="h-48 flex flex-wrap content-center">
+                                        <div>
+                                            <img class="inline-block mt-28 hidden xl:block" src="https://user-images.githubusercontent.com/54521023/116969935-c13d5b00-acd4-11eb-82b1-5ad2ff10fb76.png"></div>
+                                        <div>
+                                            <img class="inline-block mt-24 md:mt-0 p-8 md:p-0"  src="https://user-images.githubusercontent.com/54521023/116969931-bedb0100-acd4-11eb-99a9-ff5e0ee9f31f.png"></div>
+                                        <div>
+                                            <img class="inline-block mt-28 hidden lg:block" src="https://user-images.githubusercontent.com/54521023/116969939-c1d5f180-acd4-11eb-8ad4-9ab9143bdb50.png"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+
+                    <!-- component -->
+                    <div class="container mx-auto p-4 lg:h-screen flex items-center justify-center">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <!-- Blog Entry 1 -->
+                            <div class="max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&q=80&w=1528&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Img by Meriç Dağlı https://unsplash.com/@meric" class="w-full h-auto object-cover rounded-lg">
+                                <div class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
+                                    <h1 class="text-2xl font-semibold">Nature Image</h1>
+                                    <p class="mt-2">This is a beautiful nature image placeholder. You can replace it with your own image.</p>
+                                </div>
+                            </div>
+
+                            <!-- Blog Entry 2 -->
+                            <div class="max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&q=80&w=1528&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Img by Meriç Dağlı https://unsplash.com/@meric" class="w-full h-auto object-cover rounded-lg">
+                                <div class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
+                                    <h1 class="text-2xl font-semibold">Nature Image</h1>
+                                    <p class="mt-2">This is a beautiful nature image placeholder. You can replace it with your own image.</p>
+                                </div>
+                            </div>
+
+                            <!-- Blog Entry 3 -->
+                            <div class="max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&q=80&w=1528&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Img by Meriç Dağlı https://unsplash.com/@meric" class="w-full h-auto object-cover rounded-lg">
+                                <div class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
+                                    <h1 class="text-2xl font-semibold">Nature Image</h1>
+                                    <p class="mt-2">This is a beautiful nature image placeholder. You can replace it with your own image.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
