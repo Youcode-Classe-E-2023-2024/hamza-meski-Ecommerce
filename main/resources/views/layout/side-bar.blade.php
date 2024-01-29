@@ -42,7 +42,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                       </svg>
                     </span>
-                    <span class="ml-2 text-sm tracking-wide truncate">Manage Product</span>
+                    <span class="ml-2 text-sm tracking-wide truncate">Manage Products</span>
                 </a>
             </li>
 
@@ -54,7 +54,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                       </svg>
                     </span>
-                    <span class="ml-2 text-sm tracking-wide truncate">Logout</span>
+                    <span class="ml-2 text-sm tracking-wide truncate">Admin Dash</span>
                 </a>
             </li>
 
@@ -90,7 +90,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                       </svg>
                     </span>
-                    <span class="ml-2 text-sm tracking-wide truncate">Admin Dash</span>
+                    <span class="ml-2 text-sm tracking-wide truncate">Logout</span>
                 </a>
             </li>
 

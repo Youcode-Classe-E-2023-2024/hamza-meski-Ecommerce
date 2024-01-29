@@ -30,53 +30,60 @@
         </div>
     </section>
 
-    <!-- component -->
-    <div id="product-section" class="px-4 py-16 ">
-        <div class="relative w-full md:max-w-2xl md:mx-auto text-center">
-            <h1 class="font-bold text-yellow-300 text-xl sm:text-2xl md:text-4xl leading-tight mb-6">
-                A simple and smart Place to get a product
-            </h1>
-            <p class="text-white underline md:text-xl md:px-18">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit hello.
-            </p>
+    <section class="">
+        <!-- component -->
+            <div id="product-section" class="px-4 py-16 mb-40">
+                <div class="relative w-full md:max-w-2xl md:mx-auto text-center">
+                    <h1 class="font-bold text-yellow-300 text-xl sm:text-2xl md:text-4xl leading-tight mb-6">
+                        A simple and smart Place to get a product
+                    </h1>
+                    <p class="text-white bg-black text-yellow-300 rounded-md py-2 md:text-xl md:px-18">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit hello.
+                    </p>
+                </div>
+            </div>
+
+
+        <div class="container mx-auto p-4 lg:h-screen flex items-center justify-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
+                <!-- Blog Entry 1 -->
+                <div class="max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&q=80&w=1528&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Img by Meriç Dağlı https://unsplash.com/@meric" class="w-full h-auto object-cover rounded-lg">
+                    <div class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
+                        <h1 class="text-2xl font-semibold">Nature Image</h1>
+                        <p class="mt-2">This is a beautiful nature image placeholder. You can replace it with your own image.</p>
+                        <button class="text-yellow-500 bg-black hover:bg-gray-900 px-6 py-2 mt-2 rounded-md">view</button>
+                    </div>
+
+                </div>
+
+                <div class="max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&q=80&w=1528&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Img by Meriç Dağlı https://unsplash.com/@meric" class="w-full h-auto object-cover rounded-lg">
+                    <div class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
+                        <h1 class="text-2xl font-semibold">Nature Image</h1>
+                        <p class="mt-2">This is a beautiful nature image placeholder. You can replace it with your own image.</p>
+                    </div>
+                </div>
+
+                <!-- Blog Entry 2 -->
+                <div class="max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&q=80&w=1528&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Img by Meriç Dağlı https://unsplash.com/@meric" class="w-full h-auto object-cover rounded-lg">
+                    <div class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
+                        <h1 class="text-2xl font-semibold">Nature Image</h1>
+                        <p class="mt-2">This is a beautiful nature image placeholder. You can replace it with your own image.</p>
+                    </div>
+                </div>
+
+                <!-- Blog Entry 3 -->
+                <div class="max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&q=80&w=1528&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Img by Meriç Dağlı https://unsplash.com/@meric" class="w-full h-auto object-cover rounded-lg">
+                    <div class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
+                        <h1 class="text-2xl font-semibold">Nature Image</h1>
+                        <p class="mt-2">This is a beautiful nature image placeholder. You can replace it with your own image.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="container mx-auto p-4 lg:h-screen flex items-center justify-center">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
-            <!-- Blog Entry 1 -->
-            <div class="max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&q=80&w=1528&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Img by Meriç Dağlı https://unsplash.com/@meric" class="w-full h-auto object-cover rounded-lg">
-                <div class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
-                    <h1 class="text-2xl font-semibold">Nature Image</h1>
-                    <p class="mt-2">This is a beautiful nature image placeholder. You can replace it with your own image.</p>
-                </div>
-            </div>
+    </section>
 
-            <div class="max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&q=80&w=1528&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Img by Meriç Dağlı https://unsplash.com/@meric" class="w-full h-auto object-cover rounded-lg">
-                <div class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
-                    <h1 class="text-2xl font-semibold">Nature Image</h1>
-                    <p class="mt-2">This is a beautiful nature image placeholder. You can replace it with your own image.</p>
-                </div>
-            </div>
-
-            <!-- Blog Entry 2 -->
-            <div class="max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&q=80&w=1528&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Img by Meriç Dağlı https://unsplash.com/@meric" class="w-full h-auto object-cover rounded-lg">
-                <div class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
-                    <h1 class="text-2xl font-semibold">Nature Image</h1>
-                    <p class="mt-2">This is a beautiful nature image placeholder. You can replace it with your own image.</p>
-                </div>
-            </div>
-
-            <!-- Blog Entry 3 -->
-            <div class="max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&q=80&w=1528&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Img by Meriç Dağlı https://unsplash.com/@meric" class="w-full h-auto object-cover rounded-lg">
-                <div class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
-                    <h1 class="text-2xl font-semibold">Nature Image</h1>
-                    <p class="mt-2">This is a beautiful nature image placeholder. You can replace it with your own image.</p>
-                </div>
-            </div>
-        </div>
-    </div>
 @endsection
