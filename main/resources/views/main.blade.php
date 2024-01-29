@@ -12,6 +12,9 @@
 <body>
     <!-- component -->
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         /* Compiled dark classes from Tailwind */
         .dark .dark\:divide-gray-700 > :not([hidden]) ~ :not([hidden]) {
             border-color: rgba(55, 65, 81);
@@ -132,6 +135,20 @@
             }
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+
     <div x-data="setup()" :class="{ 'dark': isDark }">
         <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-white dark:bg-gray-700 text-black dark:text-white">
 
@@ -246,7 +263,7 @@
                                     </h2>
                                     <p class="text-sm md:text-base text-gray-50 mb-4">Explore your favourite events and
                                         register now to showcase your talent and win exciting prizes.</p>
-                                    <a href="#"
+                                    <a href="#product-section"
                                        class="bg-transparent hover:bg-yellow-300 text-yellow-300 hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 hover:border-transparent">
                                         Explore Now</a>
                                 </div>
@@ -267,6 +284,20 @@
 
 
                     <!-- component -->
+                    <div id="product-section" class="px-4 py-16">
+                        <div class="relative w-full md:max-w-2xl md:mx-auto text-center">
+                            <h1
+                                class="font-bold text-yellow-300 text-xl sm:text-2xl md:text-4xl leading-tight mb-6"
+                            >
+                                A simple and smart Place to get a product
+                            </h1>
+
+                            <p class="text-white underline md:text-xl md:px-18">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit hello.
+                            </p>
+
+                    </div>
+
                     <div class="container mx-auto p-4 lg:h-screen flex items-center justify-center">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                             <!-- Blog Entry 1 -->
