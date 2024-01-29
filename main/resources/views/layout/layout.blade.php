@@ -11,7 +11,9 @@
             @include('layout.side-bar')
 
             <!-- container -->
-            @yield('content')
+            <main class="h-screen overflow-auto">
+                @yield('content')
+            </main>
 
         </section>
 
