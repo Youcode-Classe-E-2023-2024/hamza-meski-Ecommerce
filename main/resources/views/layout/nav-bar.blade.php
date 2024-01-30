@@ -17,8 +17,7 @@
                         <span>
                             {{ auth()->user()->name }}
                         </span>
-                        <div class="h-[40px] w-[40px] rounded-md" style="background-image: url('{{ auth()->user()->getImageURL() }}'); background-size:cover;background-position: center">
-                        </div>
+                        <div class="h-[40px] w-[40px] rounded-md" style="background-image: url('{{ auth()->user()->getImageURL() }}'); background-size:cover;background-position: center"></div>
                     </a>
                 @endauth
             </li>
