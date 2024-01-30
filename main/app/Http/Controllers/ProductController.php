@@ -8,8 +8,12 @@ use App\Models\Product;
 
 class ProductController extends Controller
 {
+    public function manage_product() {
+        return view('products.manage-product');
+    }
+
     public function show(Product $product) {
-        return view('products.show-product', compact( 'product'));
+    //        return view('products.show-product', compact( 'product'));
     }
 
     public function store() {

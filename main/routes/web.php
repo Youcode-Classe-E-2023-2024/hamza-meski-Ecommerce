@@ -32,6 +32,7 @@ Route::post('/login', [AuthController::class, 'authenticate'])->name('login.auth
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 /* product route */
+Route::get('/product', [ProductController::class, 'manage_product'])->name('products.manage-product');
 Route::get('/product/{product}', [ProductController::class, 'show'])->name('products.show');
 
 Route::post('/product', [ProductController::class, 'store'])->name('products.store')->middleware('auth');
