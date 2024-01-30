@@ -21,10 +21,20 @@
             </button>
         </form>
     @else
-        <form action="{{ route('users.edit', auth()->id()) }}" class="flex justify-center">
-            <button class="bg-black hover: px-4 py-2 rounded-md w-[80%]">
-                Follow
-            </button>
-        </form>
+        @if(auth()->user()->follows($user))
+            <form action="{{ route('users.unfollow', $user->id) }}" class="flex justify-center" method="post">
+                @csrf
+                <button type="submit" class="bg-red-500 hover: px-4 py-2 rounded-md w-[80%]">
+                    Unfollow
+                </button>
+            </form>
+        @else
+            <form action="{{ route('users.follow', $user->id) }}" class="flex justify-center" method="post">
+                @csrf
+                <button type="submit" class="bg-black hover: px-4 py-2 rounded-md w-[80%]">
+                    Follow
+                </button>
+            </form>
+        @endif
     @endif
 </div>

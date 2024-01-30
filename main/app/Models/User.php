@@ -54,4 +54,18 @@ class User extends Authenticatable
     public function products() {
         return $this->hasMany(Product::class, 'user_id', 'id');
     }
+
+    // people that we are following
+    public function followings() {
+        return $this->belongsToMany(User::class, 'follower_user', 'follower_id', 'user_id')->withTimestamps();
+    }
+
+    // people that following us
+    public function followers() {
+        return $this->belongsToMany(User::class, 'follower_user', 'user_id', 'follower_id')->withTimestamps();
+    }
+
+    public function follows(User $user) {
+        return $this->followings()->where('user_id', $user->id)->exists();
+    }
 }
