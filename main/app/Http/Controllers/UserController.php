@@ -29,28 +29,26 @@ class UserController extends Controller
         $products = $user->products()->latest()->get();
         return view('users.show', compact('user', 'products', 'profile_editing'));
     }
-//
-//    /**
-//     * Update the specified resource in storage.
-//     */
-//    public function update(User $user)
-//    {
-//        $validated = request()->validate([
-//            'name' => 'required|min:5|max:50',
-//            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-//            'bio' => 'required|min:5|max:200'
-//        ]);
-//
-//        if(request()->hasFile('image')) {
-//            $imagePath = request()->file('image')->store('images', 'public');
-//            $validated['image'] = $imagePath;
-//
-//            Storage::disk('public')->delete($user->image);
-//        }
-//
-//        $user->update($validated);
-//
-//        return redirect()->route('profile', $user->id)->with('success', 'Profile have been updated successfully');
-//    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(User $user)
+    {
+        $validated = request()->validate([
+            'name' => 'required|min:5|max:50',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'bio' => 'required|min:5|max:200'
+        ]);
+
+        if(request()->hasFile('image')) {
+            $imagePath = request()->file('image')->store('images', 'public');
+            $validated['image'] = $imagePath;
+        }
+
+        $user->update($validated);
+
+        return redirect()->route('users.show', $user->id);
+    }
 
 }
