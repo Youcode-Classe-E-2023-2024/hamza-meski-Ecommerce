@@ -13,7 +13,7 @@
         <ul class="flex items-center">
             <li>
                 <a href="#" class="flex items-center mr-4 hover:text-blue-100">
-                    Profile
+                    {{ auth()->user()->name }}
                 </a>
             </li>
         </ul>
