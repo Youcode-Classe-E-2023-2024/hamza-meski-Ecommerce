@@ -55,3 +55,8 @@ Route::put('/users/{user}', [UserController::class, 'update'])->name('users.upda
 
 /* Profile route */
 Route::get('/profile/{user}', [UserController::class, 'profile'])->name('profile')->middleware('auth');
+
+/* follow route */
+Route::post('/users/{user}/follow', [FollowerController::class, 'follow'])->middleware('auth')->name('users.follow');
+
+Route::post('/users/{user}/unfollow', [FollowerController::class, 'unfollow'])->middleware('auth')->name('users.unfollow');

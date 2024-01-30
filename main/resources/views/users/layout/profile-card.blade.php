@@ -20,5 +20,11 @@
                 Update Profile
             </button>
         </form>
+    @else
+        <form action="{{ route('users.edit', auth()->id()) }}" class="flex justify-center">
+            <button class="bg-black hover: px-4 py-2 rounded-md w-[80%]">
+                Follow
+            </button>
+        </form>
     @endif
 </div>
