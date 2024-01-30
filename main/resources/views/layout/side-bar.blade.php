@@ -103,6 +103,6 @@
             @endguest
 
         </ul>
-        <p class="mb-14 px-5 py-3 hidden md:block text-center text-xs">Copyright @2021</p>
+        <p class="mb-14 px-5 py-3 hidden md:block text-center text-xs">Copyright @2024</p>
     </div>
 </div>
