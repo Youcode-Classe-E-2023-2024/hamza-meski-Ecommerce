@@ -13,22 +13,22 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        $products = $user->products()->orderBy('created_at', 'DESC')->paginate(1);
+        $products = $user->products()->latest()->get();
         return view('users.show', compact('user', 'products'));
     }
-//
-//    public function profile(User $user) {
-//        return redirect()->route('users.show', $user->id);
-//    }
-//
-//    /**
-//     * Show the form for editing the specified resource.
-//     */
-//    public function edit(User $user)
-//    {
-//        $products = $user->products()->orderBy('created_at', 'DESC')->paginate(1);
-//        return view('users.shared.edit', compact('user', 'products'));
-//    }
+
+    public function profile(User $user) {
+        return redirect()->route('users.show', $user->id);
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(User $user) {
+        $profile_editing = true;
+        $products = $user->products()->latest()->get();
+        return view('users.show', compact('user', 'products', 'profile_editing'));
+    }
 //
 //    /**
 //     * Update the specified resource in storage.

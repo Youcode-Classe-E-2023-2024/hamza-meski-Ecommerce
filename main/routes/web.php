@@ -48,3 +48,10 @@ Route::delete('/product/{product}', [ProductController::class, 'destroy'])->name
 
 /* user route */
 Route::get('/users/{user}', [UserController::class, 'show'])->name('users.show')->middleware('auth');
+
+Route::get('/users/{user}/edit', [UserController::class, 'edit'])->name('users.edit')->middleware('auth');
+
+Route::put('/users/{user}', [UserController::class, 'update'])->name('users.update')->middleware('auth');
+
+/* Profile route */
+Route::get('/profile/{user}', [UserController::class, 'profile'])->name('profile')->middleware('auth');
