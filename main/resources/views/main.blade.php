@@ -45,43 +45,21 @@
 
 
         <div class="container mx-auto p-4 lg:h-screen flex items-center justify-center">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
-                <!-- Blog Entry 1 -->
-                <div class="max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&q=80&w=1528&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Img by Meriç Dağlı https://unsplash.com/@meric" class="w-full h-auto object-cover rounded-lg">
-                    <div class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
-                        <h1 class="text-2xl font-semibold">Nature Image</h1>
-                        <p class="mt-2">This is a beautiful nature image placeholder. You can replace it with your own image.</p>
-                        <button class="text-yellow-500 bg-black hover:bg-gray-900 px-6 py-2 mt-2 rounded-md">view</button>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8">
 
-                </div>
-
-                <div class="max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&q=80&w=1528&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Img by Meriç Dağlı https://unsplash.com/@meric" class="w-full h-auto object-cover rounded-lg">
-                    <div class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
-                        <h1 class="text-2xl font-semibold">Nature Image</h1>
-                        <p class="mt-2">This is a beautiful nature image placeholder. You can replace it with your own image.</p>
+                @foreach($products as $product)
+                    <div class="w-80  max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer overflow-hidden">
+                        <div class="aspect-w-3 aspect-h-2 h-full">
+                            <img src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&q=80&w=1528&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image" class="w-full h-full object-cover rounded-t-lg">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
+                            <h1 class="text-2xl font-semibold">{{ $product->title }}</h1>
+                            <p class="mt-2">{{ $product->content }}</p>
+                            <a href="{{ route('products.show', $product->id) }}" class="text-yellow-500 bg-black hover:bg-gray-900 px-6 py-2 mt-2 rounded-md">View</a>
+                        </div>
                     </div>
-                </div>
+                @endforeach
 
-                <!-- Blog Entry 2 -->
-                <div class="max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&q=80&w=1528&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Img by Meriç Dağlı https://unsplash.com/@meric" class="w-full h-auto object-cover rounded-lg">
-                    <div class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
-                        <h1 class="text-2xl font-semibold">Nature Image</h1>
-                        <p class="mt-2">This is a beautiful nature image placeholder. You can replace it with your own image.</p>
-                    </div>
-                </div>
-
-                <!-- Blog Entry 3 -->
-                <div class="max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&q=80&w=1528&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Img by Meriç Dağlı https://unsplash.com/@meric" class="w-full h-auto object-cover rounded-lg">
-                    <div class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
-                        <h1 class="text-2xl font-semibold">Nature Image</h1>
-                        <p class="mt-2">This is a beautiful nature image placeholder. You can replace it with your own image.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>

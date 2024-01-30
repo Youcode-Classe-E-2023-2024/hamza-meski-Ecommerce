@@ -13,8 +13,10 @@
         <ul class="flex items-center">
             <li>
                 <a href="#" class="flex items-center mr-4 hover:text-blue-100">
-                    {{ auth()->user()->name }}
-                </a>
+                    @auth
+                        {{ auth()->user()->name }}
+                    @endauth
+                    </a>
             </li>
         </ul>
     </div>
