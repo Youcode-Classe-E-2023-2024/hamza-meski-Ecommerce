@@ -36,7 +36,8 @@ class ProductController extends Controller
     }
 
     public function edit(Product $product) {
-        return view('products.edit-product', compact('product'));
+        $editing = true;
+        return view('products.manage-product', compact('product', 'editing'));
     }
 
     public function update(Product $product) {

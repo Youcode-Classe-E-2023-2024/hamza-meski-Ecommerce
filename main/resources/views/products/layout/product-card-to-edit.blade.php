@@ -6,11 +6,8 @@
         <h1 class="text-2xl font-semibold">{{ $product->title }}</h1>
         <p class="mt-2">{{ $product->content }}</p>
         <div class="flex justify-center gap-2 mt-8">
-            <form action="{{ route('products.update', $product->id) }}" method="post">
-                @csrf
-                @method('put')
-                <button type="submit" class="text-green-500 bg-black hover:bg-gray-900 px-6 py-2 mt-2 rounded-md block">update</button>
-            </form>
+
+            <a href="{{ route('products.edit', $product->id) }}" type="submit" class="text-green-500 bg-black hover:bg-gray-900 px-6 py-2 mt-2 rounded-md block">edit</a>
             <form action="{{ route('products.destroy', $product->id) }}" method="post">
                 @csrf
                 @method('delete')
