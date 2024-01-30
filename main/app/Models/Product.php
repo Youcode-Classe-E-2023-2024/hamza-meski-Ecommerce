@@ -21,4 +21,5 @@ class Product extends Model
             return url('storage/' . $this->image);
         }
     }
+
 }

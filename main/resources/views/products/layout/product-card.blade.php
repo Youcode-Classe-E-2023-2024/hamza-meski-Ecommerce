@@ -8,6 +8,5 @@
         <div class="flex justify-center">
             <a href="{{ route('products.show', $product->id) }}" class="text-yellow-500 bg-black hover:bg-gray-900 px-6 py-2 mt-2 rounded-md block">View</a>
         </div>
-
     </div>
 </div>

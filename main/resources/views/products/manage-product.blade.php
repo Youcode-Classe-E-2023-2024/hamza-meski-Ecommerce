@@ -8,9 +8,10 @@
         </div>
 
         <!-- Second child -->
-        <div class="bg-green-500 p-4">
-            <!-- Content for the second column goes here -->
-            Column 2 Content
+        <div class="bg-green-500 p-4 h-full overflow-auto">
+            @foreach(auth()->user()->products as $product)
+                @include('products.layout.product-card-to-edit')
+            @endforeach
         </div>
     </div>
 @endsection

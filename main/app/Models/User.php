@@ -48,4 +48,8 @@ class User extends Authenticatable
             return url('storage/' . $this->image);
         }
     }
+
+    public function products() {
+        return $this->hasMany(Product::class, 'user_id', 'id');
+    }
 }
