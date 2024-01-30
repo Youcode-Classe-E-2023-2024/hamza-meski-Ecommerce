@@ -18,7 +18,7 @@ class AuthController extends Controller
             'name' => 'required|min:5|max:50',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|confirmed',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'bio' => 'required|min:5|max:200'
         ]);
 

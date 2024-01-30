@@ -20,7 +20,7 @@ class ProductController extends Controller
         $validated = request()->validate([
             'title' => 'required|min:5',
             'content' => 'required|min:5',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048'
         ]);
 
         $validated['user_id'] = auth()->user()->id;

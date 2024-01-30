@@ -37,7 +37,7 @@ class UserController extends Controller
     {
         $validated = request()->validate([
             'name' => 'required|min:5|max:50',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'bio' => 'required|min:5|max:200'
         ]);
 
