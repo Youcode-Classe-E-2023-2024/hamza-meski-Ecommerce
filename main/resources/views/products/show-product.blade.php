@@ -12,7 +12,13 @@
                     <h1 class="text-3xl uppercase bg-black p-2 rounded-md text-center">{{ $product->title }}</h1>
                     <p class="font mb-5 font-bold">{{ $product->created_at->toDateString() }}</p>
                     <p class="font-semibold">{{ $product->content }}</p>
-                    <a href="{{ route('users.show', $product->user->id) }}" class="bg-black py-3 px-7 mt-4 text-white inline-block mt-6">{{ $product->user->name }}</a>
+                    <div class="flex">
+                        <a href="{{ route('users.show', $product->user->id) }}" class="block-inline bg-black rounded-full p-2 mt-4 text-white inline-block mt-6 flex items-center gap-2">
+                            <img class="w-[60px] h-[60px] rounded-full" src="{{ $product->user->getImageURL() }}" alt="">
+                            {{ $product->user->email }}
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </div>

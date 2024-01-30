@@ -5,7 +5,7 @@
     <form action="{{ route('products.update', $product->id) }}" method="post" enctype="multipart/form-data" class="flex flex-col gap-10">
         @csrf
         @method('put')
-        <!-- flex - asjad korvuti, nb! flex-1 - element kogu ylejaanud laius -->
+        <!-- flex -->
         <div class="flex items-center mb-5">
             <!--         tip - here neede inline-block , but why? -->
             <label for="" class="inline-block w-20 mr-6 text-right

@@ -4,7 +4,7 @@
     </div>
     <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
         <h1 class="text-2xl font-semibold">{{ $product->title }}</h1>
-        <p class="mt-2">{{ $product->content }}</p>
+        <p class="mt-2">{{ Illuminate\Support\Str::limit($product->content, 100) }}</p>
         @if(auth()->id() == $product->user->id)
             <div class="flex justify-center gap-2 mt-8">
                 <a href="{{ route('products.edit', $product->id) }}" type="submit" class="text-green-500 bg-black hover:bg-gray-900 px-6 py-2 mt-2 rounded-md block">edit</a>
@@ -15,7 +15,9 @@
                 </form>
             </div>
         @else
-            <a href="{{ route('products.show', $product->id) }}" class="bg-black py-3 px-7 mt-4 text-white inline-block mt-6">view</a>
+            <div class="flex w-full ">
+                <a href="{{ route('products.show', $product->id) }}" class="bg-black block w-full text-center py-3 px-7 mt-4 text-white mt-6 text-yellow-500">view</a>
+            </div>
         @endif
 
     </div>
