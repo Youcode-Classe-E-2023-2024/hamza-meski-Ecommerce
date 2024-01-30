@@ -12,7 +12,7 @@
                     <h1 class="text-3xl uppercase bg-black p-2 rounded-md text-center">{{ $product->title }}</h1>
                     <p class="font mb-5 font-bold">{{ $product->created_at->toDateString() }}</p>
                     <p class="font-semibold">{{ $product->content }}</p>
-                    <button class="bg-black py-3 px-7 mt-4 text-white">{{ $product->user->name }}</button>
+                    <a href="{{ route('users.show', $product->user->id) }}" class="bg-black py-3 px-7 mt-4 text-white inline-block mt-6">{{ $product->user->name }}</a>
                 </div>
             </div>
         </div>

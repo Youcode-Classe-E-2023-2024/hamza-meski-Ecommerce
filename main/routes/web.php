@@ -45,3 +45,6 @@ Route::put('/product/{product}', [ProductController::class, 'update'])->name('pr
 Route::delete('/product/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
 
 //Route::post('/product/{product}/comments', [CommentController::class, 'store'])->name('products.comments.store')->middleware('auth');
+
+/* user route */
+Route::get('/users/{user}', [UserController::class, 'show'])->name('users.show')->middleware('auth');
