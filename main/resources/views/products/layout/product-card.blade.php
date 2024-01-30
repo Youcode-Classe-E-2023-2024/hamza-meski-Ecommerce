@@ -1,4 +1,4 @@
-<div class="w-80 h-[400px]  max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer overflow-hidden">
+<div class="w-[100%] h-[400px] bg-red-500  max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer overflow-hidden">
     <div class="aspect-w-3 aspect-h-2 h-full">
         <img src="{{ $product->getImageURL() }}" alt="Image" class="w-full h-full object-cover rounded-t-lg">
     </div>

@@ -32,19 +32,18 @@
 
     <section class="">
         <!-- component -->
-            <div id="product-section" class="px-4 py-16 mb-40">
-                <div class="relative w-full md:max-w-2xl md:mx-auto text-center">
-                    <h1 class="font-bold text-yellow-300 text-xl sm:text-2xl md:text-4xl leading-tight mb-6">
-                        A simple and smart Place to get a product
-                    </h1>
-                    <p class="text-white bg-black text-yellow-300 rounded-md py-2 md:text-xl md:px-18">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit hello.
-                    </p>
-                </div>
+        <div id="product-section" class="px-4 pt-16 mb-20">
+            <div class="relative w-full md:max-w-2xl md:mx-auto text-center">
+                <h1 class="font-bold text-yellow-300 text-xl sm:text-2xl md:text-4xl leading-tight mb-6">
+                    A simple and smart Place to get a product
+                </h1>
+                <p class="text-white bg-black text-yellow-300 rounded-md py-2 md:text-xl md:px-18">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit hello.
+                </p>
             </div>
+        </div>
 
-
-        <div class="container mx-auto p-4 lg:h-screen ">
+        <div class="container mx-auto px-20 lg:h-screen ">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8">
 
                 @foreach($products as $product)
