@@ -11,8 +11,8 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        $ideas = $user->ideas()->orderBy('created_at', 'DESC')->paginate(1);
-        return view('users.show', compact('user', 'ideas'));
+        $products = $user->products()->orderBy('created_at', 'DESC')->paginate(1);
+        return view('users.show', compact('user', 'products'));
     }
 
     public function profile(User $user) {
@@ -24,8 +24,8 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        $ideas = $user->ideas()->orderBy('created_at', 'DESC')->paginate(1);
-        return view('users.shared.edit', compact('user', 'ideas'));
+        $products = $user->products()->orderBy('created_at', 'DESC')->paginate(1);
+        return view('users.shared.edit', compact('user', 'products'));
     }
 
     /**
