@@ -15,4 +15,10 @@ class Product extends Model
         'content',
         'image'
     ];
+
+    public function getImageURL() {
+        if($this->image) {
+            return url('storage/' . $this->image);
+        }
+    }
 }
