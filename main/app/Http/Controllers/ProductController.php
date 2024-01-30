@@ -18,8 +18,8 @@ class ProductController extends Controller
 
     public function store() {
         $validated = request()->validate([
-            'content' => 'required|min:5',
             'title' => 'required|min:5',
+            'content' => 'required|min:5',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
 
@@ -43,7 +43,7 @@ class ProductController extends Controller
     public function update(Product $product) {
         $validated = request()->validate([
             'title' => 'required|min:5',
-            'content' => 'required|min:5|max:200',
+            'content' => 'required|min:5',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
 

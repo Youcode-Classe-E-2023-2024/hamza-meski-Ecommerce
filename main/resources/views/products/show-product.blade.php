@@ -9,10 +9,10 @@
             </div>
             <div class="flex bg-yellow-500 p-10">
                 <div class="mb-auto mt-auto max-w-lg text">
-                    <h1 class="text-3xl uppercase bg-black p-2 rounded-md text-center">Jun Santilla</h1>
-                    <p class="font mb-5 font-bold">{{ $product->title }}</p>
+                    <h1 class="text-3xl uppercase bg-black p-2 rounded-md text-center">{{ $product->title }}</h1>
+                    <p class="font mb-5 font-bold">{{ $product->created_at->toDateString() }}</p>
                     <p class="font-semibold">{{ $product->content }}</p>
-                    <button class="bg-black py-3 px-7 mt-6 text-white">{{ $product->user->name }}</button>
+                    <button class="bg-black py-3 px-7 mt-4 text-white">{{ $product->user->name }}</button>
                 </div>
             </div>
         </div>
