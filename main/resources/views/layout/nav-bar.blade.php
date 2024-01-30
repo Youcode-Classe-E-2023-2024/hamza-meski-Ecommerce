@@ -11,12 +11,16 @@
             <input value="{{ request('search') }}" name="search" type="search" name="" id="" placeholder="Search" class="w-full pl-3 text-sm text-black outline-none focus:outline-none bg-transparent" />
         </form>
         <ul class="flex items-center">
-            <li>
-                <a href="#" class="flex items-center mr-4 hover:text-blue-100">
-                    @auth
-                        {{ auth()->user()->name }}
-                    @endauth
+            <li class="flex gap-2 items-center mr-4 hover:text-blue-100">
+                @auth
+                    <a href="{{ route('users.edit', auth()->id()) }}" class="flex items-center gap-2">
+                        <span>
+                            {{ auth()->user()->name }}
+                        </span>
+                        <div class="h-[40px] w-[40px] rounded-md" style="background-image: url('{{ auth()->user()->getImageURL() }}'); background-size:cover;">
+                        </div>
                     </a>
+                @endauth
             </li>
         </ul>
     </div>
