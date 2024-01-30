@@ -42,6 +42,7 @@ class ProductController extends Controller
 
     public function update(Product $product) {
         $validated = request()->validate([
+            'title' => 'required|min:5',
             'content' => 'required|min:5|max:200',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
@@ -53,7 +54,7 @@ class ProductController extends Controller
         }
         $product->update($validated);
 
-        return redirect()->route('products.show', $product->id);
+        return redirect()->route('main');
     }
 
     public function destroy(Product $product) {

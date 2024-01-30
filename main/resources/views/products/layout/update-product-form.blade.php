@@ -2,8 +2,9 @@
 <div class="bg-white p-10 w-[90%]">
     <h1 class="text-black font-bold text-3xl text-center mb-8">add a product</h1>
 
-    <form action="{{ route('products.store') }}" method="post" enctype="multipart/form-data" class="flex flex-col gap-10">
+    <form action="{{ route('products.update', $product->id) }}" method="post" enctype="multipart/form-data" class="flex flex-col gap-10">
         @csrf
+        @method('put')
         <!-- flex - asjad korvuti, nb! flex-1 - element kogu ylejaanud laius -->
         <div class="flex items-center mb-5">
             <!--         tip - here neede inline-block , but why? -->
