@@ -53,7 +53,7 @@
 
 
             </div>
-            <div>
+            <div class="flex justify-center gap-2 my-16">
                 {{ $products->links() }}
             </div>
 

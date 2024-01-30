@@ -14,7 +14,7 @@ class MainController extends Controller
             $products = $products->where('content', 'like', '%' . request()->get('search','') . '%');
         }
 
-        $products = $products->paginate(3);
+        $products = $products->paginate(6);
         return view('main', compact('products'));
     }
 }
