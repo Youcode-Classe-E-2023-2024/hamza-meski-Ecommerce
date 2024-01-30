@@ -7,8 +7,8 @@
         <p class="mt-2">{{ Illuminate\Support\Str::limit($product->content, 100) }}</p>
         <p class="text-yellow-500 mt-2">{{ $product->created_at->toDateString() }}</p>
         <a href="{{ route('users.show', $product->user->id) }}" class="flex gap-2 items-center mt-2">
-            <div class="h-[40px] w-[40px] rounded-full" style="background-image: url('{{ auth()->user()->getImageURL() }}'); background-size:cover;background-position: center"></div>
-            <div>{{ auth()->user()->name }}</div>
+            <div class="h-[40px] w-[40px] rounded-full" style="background-image: url('{{ $product->user->getImageURL() }}'); background-size:cover;background-position: center"></div>
+            <div>{{ $product->user->name }}</div>
         </a>
         <div class="flex justify-center">
             <a href="{{ route('products.show', $product->id) }}" class="block w-full text-center mt-4 text-yellow-500 bg-black hover:bg-gray-900 px-6 py-2 mt-2 rounded-md block">View</a>

@@ -23,7 +23,7 @@ class FeedController extends Controller
         }
 
         $products = $products->paginate(3);
-
-        return view('main', compact('products'));
+        $search_bar = true;
+        return view('main', compact('products', 'search_bar'));
     }
 }

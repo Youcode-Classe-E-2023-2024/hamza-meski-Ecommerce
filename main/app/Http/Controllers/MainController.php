@@ -15,6 +15,8 @@ class MainController extends Controller
         }
 
         $products = $products->paginate(6);
-        return view('main', compact('products'));
+
+        $search_bar = true;
+        return view('main', compact('products', 'search_bar'));
     }
 }
