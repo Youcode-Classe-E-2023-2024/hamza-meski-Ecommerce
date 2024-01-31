@@ -38,7 +38,7 @@
                     A simple and smart Place to get a product
                 </h1>
                 <p class="text-white bg-black text-yellow-300 rounded-md py-2 md:text-xl md:px-18">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit hello.
+                    Bye Anything Anywhere.
                 </p>
             </div>
         </div>
@@ -46,9 +46,13 @@
         <div class="container mx-auto px-20 lg:h-screen ">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8">
 
-                @foreach($products as $product)
+                @forelse($products as $product)
                     @include('products.layout.product-card')
-                @endforeach
+                    @empty
+                    <div class="flex justify-center align-items text-5xl">
+                        There no product :(
+                    </div>
+                @endforelse
 
             </div>
             <div class="flex justify-center gap-2 my-16">
