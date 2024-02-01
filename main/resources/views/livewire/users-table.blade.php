@@ -15,17 +15,20 @@
                                           clip-rule="evenodd" />
                                 </svg>
                             </div>
-                            <input  type="text"
+                            <input
+                                    wire:model.live.debounce.300s = "search"
+                                    type="text"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2 "
                                     placeholder="Search" required="">
                         </div>
                     </div>
                     <div class="flex space-x-3">
                         <div class="flex space-x-3 items-center">
-                            <label class="w-40 text-sm font-medium text-gray-900">User Type :</label>
+                            <label class="w-40 text-sm font-medium text-white">User Type :</label>
                             <select
+                                wire:model.live = "admin"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
-                                <option value="">All</option>
+                                <option value="ALL">All</option>
                                 <option value="0">User</option>
                                 <option value="1">Admin</option>
                             </select>
@@ -39,27 +42,26 @@
                             <th scope="col" class="px-4 py-3">name</th>
                             <th scope="col" class="px-4 py-3">email</th>
                             <th scope="col" class="px-4 py-3">Role</th>
-                            <th scope="col" class="px-4 py-3">Joined</th>
-                            <th scope="col" class="px-4 py-3">Last update</th>
+                            <th scope="col" class="px-4 py-3">joind at </th>
+                            <th scope="col" class="px-4 py-3">updated at </th>
                             <th scope="col" class="px-4 py-3">
-                                <span class="sr-only">Actions</span>
+{{--                                <span class="sr-only">Actions</span>--}}
+                                action
                             </th>
                         </tr>
                         </thead>
                         <tbody>
 
                             @foreach($users as $user)
-                                <tr class="border-b dark:border-gray-700">
-                                    <th scope="row"
-                                        class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        {{ $user->name }}</th>
+                                <tr wire:key="{{ $user->id }}" class="border-b dark:border-gray-700">
+                                    <td class="px-4 py-3 text-white">{{ $user->name }}</td>
                                     <td class="px-4 py-3">{{ $user->email }}</td>
                                     <td class="px-4 py-3 text-white m-2  {{ $user->is_admin ? 'bg-green-500': 'bg-yellow-500' }}">
                                         {{ $user->is_admin? 'admin': 'user' }}</td>
                                     <td class="px-4 py-3">{{ $user->created_at }}</td>
-{{--                                    <td class="px-4 py-3">{{ $user->updated_at }}</td>--}}
+                                    <td class="px-4 py-3">{{ $user->updated_at }}</td>
                                     <td class="px-4 py-3 flex items-center justify-end">
-                                        <button class="px-3 py-1 bg-red-500 text-white rounded">X</button>
+                                        <button wire:click="delete({{ $user->id }})" class="px-3 py-1 bg-red-500 text-white rounded">X</button>
                                     </td>
                                 </tr>
                             @endforeach
@@ -71,8 +73,9 @@
                 <div class="py-4 px-3">
                     <div class="flex ">
                         <div class="flex space-x-4 items-center mb-3">
-                            <label class="w-32 text-sm font-medium text-gray-900">Per Page</label>
+                            <label class="w-32 text-sm text-white font-bold">Per Page</label>
                             <select
+                                wire:model.live = 'perPage'
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
                                 <option value="5">5</option>
                                 <option value="10">10</option>
@@ -82,6 +85,7 @@
                             </select>
                         </div>
                     </div>
+                    {{ $users->links() }}
                 </div>
             </div>
         </div>

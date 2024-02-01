@@ -68,4 +68,8 @@ class User extends Authenticatable
     public function follows(User $user) {
         return $this->followings()->where('user_id', $user->id)->exists();
     }
+
+    public function scopeSearch($query, $value) {
+        $query->where('name', 'like', "%{$value}%")->orWhere('email', 'like', "%{$value}%");
+    }
 }
