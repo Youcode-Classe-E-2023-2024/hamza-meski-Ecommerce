@@ -18,7 +18,7 @@ class UsersTable extends Component
     public function delete(User $user) {
         $user->delete();
     }
-    
+
     public function render()
     {
         $users = User::search($this->search)
