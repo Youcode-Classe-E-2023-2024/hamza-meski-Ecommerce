@@ -50,13 +50,12 @@ class ProductController extends Controller
         if(request()->hasFile('image')) {
             $imagePath = request()->file('image')->store('images', 'public');
             $validated['image'] = $imagePath;
-
         }
+
         $product->update($validated);
 
         return redirect()->route('main');
     }
-
     public function destroy(Product $product) {
         $product->delete();
         return redirect()->route('main');

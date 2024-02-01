@@ -11,7 +11,7 @@ class MainController extends Controller
         $products = Product::latest();
 
         if(request()->has('search')) {
-            $products = $products->where('content', 'like', '%' . request()->get('search','') . '%');
+            $products = $products->where('title', 'like', '%' . request()->get('search','') . '%');
         }
 
         $products = $products->paginate(6);

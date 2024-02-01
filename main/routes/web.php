@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\FollowerController;
 use App\Http\Controllers\FeedController;
+use App\Http\Controllers\AdminController;
 
 
 /*
@@ -65,3 +66,6 @@ Route::post('/users/{user}/unfollow', [FollowerController::class, 'unfollow'])->
 
 /* feed route */
 Route::get('/feed', FeedController::class)->middleware('auth')->name('feed');
+
+/* Admin route */
+Route::get('/admin', [AdminController::class, 'index'])->name('admin.show');
