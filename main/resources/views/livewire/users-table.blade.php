@@ -15,6 +15,7 @@
                                           clip-rule="evenodd" />
                                 </svg>
                             </div>
+
                             <input
                                     wire:model.live.debounce.300s = "search"
                                     type="text"
@@ -54,13 +55,13 @@
 
                             @foreach($users as $user)
                                 <tr wire:key="{{ $user->id }}" class="border-b dark:border-gray-700">
-                                    <td class="px-4 py-3 text-white">{{ $user->name }}</td>
-                                    <td class="px-4 py-3">{{ $user->email }}</td>
-                                    <td class="px-4 py-3 text-white m-2  {{ $user->is_admin ? 'bg-green-500': 'bg-yellow-500' }}">
+                                    <td scope="col" class="px-4 py-3 text-white" wire:click="setSortBy('name')">{{ $user->name }}</td>
+                                    <td scope="col" class="px-4 py-3">{{ $user->email }}</td>
+                                    <td scope="col" class="px-4 py-3 text-white m-2  {{ $user->is_admin ? 'bg-green-500': 'bg-yellow-500' }}">
                                         {{ $user->is_admin? 'admin': 'user' }}</td>
-                                    <td class="px-4 py-3">{{ $user->created_at }}</td>
-                                    <td class="px-4 py-3">{{ $user->updated_at }}</td>
-                                    <td class="px-4 py-3 flex items-center justify-end">
+                                    <td scope="col" class="px-4 py-3">{{ $user->created_at }}</td>
+                                    <td scope="col" class="px-4 py-3">{{ $user->updated_at }}</td>
+                                    <td scope="col" class="px-4 py-3 flex items-center justify-end">
                                         <button onclick="confirm('Are you sure you want to delete {{ $user->name }} ?') ? '' : event.stopImmediatePropagation()" wire:click="delete({{ $user->id }})" class="px-3 py-1 bg-red-500 text-white rounded">X</button>
                                     </td>
                                 </tr>

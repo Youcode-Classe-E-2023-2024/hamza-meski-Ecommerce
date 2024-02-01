@@ -12,11 +12,18 @@ use WithPagination;
 class UsersTable extends Component
 {
     public $search = '';
-    public $perPage = 4;
+    public $perPage = 2;
     public $admin = '';
+
+    public $sortBy = 'created_at';
+    public $sortDir = 'DESC';
 
     public function delete(User $user) {
         $user->delete();
+    }
+
+    public function setSortBy($sortBy) {
+        $this->sortBy = $sortBy;
     }
 
     public function render()
@@ -25,6 +32,7 @@ class UsersTable extends Component
             ->when($this->admin !== '', function($query) {
                 $query->where('is_admin', $this->admin);
             })
+            ->orderBy($this->sortBy, $this->sortDir)
             ->paginate($this->perPage);
         return view('livewire.users-table',compact('users'));
     }
