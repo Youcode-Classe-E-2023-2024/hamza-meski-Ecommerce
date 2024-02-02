@@ -53,7 +53,8 @@
                         <tbody>
 
                             @foreach($users as $user)
-                                <tr wire:key="{{ $user->id }}" class="border-b dark:border-gray-700">
+{{--                                wire:key="{{ $user->id }}"--}}
+                                <tr  class="border-b dark:border-gray-700">
                                     <td scope="col" class="px-4 py-3 text-white" >{{ $user->name }}</td>
                                     <td scope="col" class="px-4 py-3">{{ $user->email }}</td>
                                     <td scope="col" class="px-4 py-3 text-white m-2  {{ $user->is_admin ? 'bg-green-500': 'bg-yellow-500' }}">
