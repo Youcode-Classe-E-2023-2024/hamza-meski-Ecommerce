@@ -6,16 +6,17 @@ use Livewire\Component;
 
 use App\Models\User;
 
-use WithPagination;
+use Livewire\WithPagination;
 
 
 class UsersTable extends Component
 {
+    use WithPagination;
     public $search = '';
     public $perPage = 2;
     public $admin = '';
 
-    public $sortBy = 'created_at';
+    public $sortBy = 'name';
     public $sortDir = 'DESC';
 
     public function delete(User $user) {
@@ -37,3 +38,4 @@ class UsersTable extends Component
         return view('livewire.users-table',compact('users'));
     }
 }
+

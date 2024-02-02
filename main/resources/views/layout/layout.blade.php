@@ -19,5 +19,5 @@
 
     </div>
 </div>
-
+@livewireScripts
 @include('layout.footer')

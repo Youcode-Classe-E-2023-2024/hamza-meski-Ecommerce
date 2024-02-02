@@ -46,7 +46,6 @@
                             <th scope="col" class="px-4 py-3">joind at </th>
                             <th scope="col" class="px-4 py-3">updated at </th>
                             <th scope="col" class="px-4 py-3">
-{{--                                <span class="sr-only">Actions</span>--}}
                                 action
                             </th>
                         </tr>
