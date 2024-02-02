@@ -1,9 +1,9 @@
-## Ecommerce application that cover the following functionnalities
-# Displaying the products with the owners informations.
+#Ecommerce application that cover the following functionnalities
+### Displaying the products with the owners informations.
 
-# Creat, Read, Update, Delete a Product.
+### Creat, Read, Update, Delete a Product.
 
-# Authentication system with admin dashboard.
+### Authentication system with admin dashboard.
 
 ![ecommerce](https://github.com/HAMZA7onx/Shares/assets/88968389/920963cb-a3de-4cbb-992c-2a7e6609e2a8)
 ![ecommerce2](https://github.com/HAMZA7onx/Shares/assets/88968389/6805e106-9b9c-4aad-8774-4c5942f2f551)
