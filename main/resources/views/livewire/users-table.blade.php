@@ -40,10 +40,10 @@
                     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                         <tr>
-                            <th scope="col" class="px-4 py-3">name</th>
+                            <th scope="col" class="px-4 py-3" wire:click="setSortBy('name')">name</th>
                             <th scope="col" class="px-4 py-3">email</th>
                             <th scope="col" class="px-4 py-3">Role</th>
-                            <th scope="col" class="px-4 py-3">joind at </th>
+                            <th scope="col" class="px-4 py-3" wire:click="setSortBy('created_at')">joind at </th>
                             <th scope="col" class="px-4 py-3">updated at </th>
                             <th scope="col" class="px-4 py-3">
                                 action
@@ -54,7 +54,7 @@
 
                             @foreach($users as $user)
                                 <tr wire:key="{{ $user->id }}" class="border-b dark:border-gray-700">
-                                    <td scope="col" class="px-4 py-3 text-white" wire:click="setSortBy('name')">{{ $user->name }}</td>
+                                    <td scope="col" class="px-4 py-3 text-white" >{{ $user->name }}</td>
                                     <td scope="col" class="px-4 py-3">{{ $user->email }}</td>
                                     <td scope="col" class="px-4 py-3 text-white m-2  {{ $user->is_admin ? 'bg-green-500': 'bg-yellow-500' }}">
                                         {{ $user->is_admin? 'admin': 'user' }}</td>

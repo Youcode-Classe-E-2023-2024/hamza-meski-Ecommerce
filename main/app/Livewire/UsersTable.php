@@ -17,14 +17,20 @@ class UsersTable extends Component
     public $admin = '';
 
     public $sortBy = 'name';
-    public $sortDir = 'DESC';
+    public $sortDirection = 'DESC';
 
     public function delete(User $user) {
         $user->delete();
     }
 
-    public function setSortBy($sortBy) {
-        $this->sortBy = $sortBy;
+    public function setSortBy($field) {
+        if ($this->sortBy === $field) {
+            $this->sortDirection = $this->sortDirection === 'asc' ? 'desc' : 'asc';
+        } else {
+            $this->sortDirection = 'asc';
+        }
+
+        $this->sortBy = $field;
     }
 
     public function render()
@@ -33,7 +39,7 @@ class UsersTable extends Component
             ->when($this->admin !== '', function($query) {
                 $query->where('is_admin', $this->admin);
             })
-            ->orderBy($this->sortBy, $this->sortDir)
+            ->orderBy($this->sortBy, $this->sortDirection)
             ->paginate($this->perPage);
         return view('livewire.users-table',compact('users'));
     }
